@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title><%=client.username%></title>
+    <meta name="description" content="HD Development Dashboard">
+    <link id="favicon" rel="icon" href="https/cdn.discordapp.com/avatars/505926880181092362/e93b7477d496c1bfdb4b472166224de7.png?width=100&height=100" type="image/x-icon">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/profile"><%=status%></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white">
+<fieldset>
+<!-- Form Name -->
+<legend>Add Your Discord Bot</legend>
+
+<!-- Text input-->
+  <form action="/send-addbot">
+<div align="center" class="form-group">
+  <label class="col-md-4 control-label" for="botimd" action="/botlol">Bot ID</label>  
+  <div class="col-md-4">
+  <input id="botid" name="botid" type="text" placeholder="112233445566778899" class="form-control input-md" required="">
+  <span class="help-block">This is the ID of your bot.</span>  
+  </div>
+</div>
+
+
+<!-- Textarea -->
+<div align="center" class="form-group">
+  <label class="col-md-4 control-label" for="textarea">Description</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="textarea" name="textarea">Write a description of your bot.</textarea>
+  </div>
+</div>
+
+<!-- Text input-->
+<div align="center" class="form-group">
+  <label class="col-md-4 control-label" for="website">Website</label>  
+  <div class="col-md-5">
+  <input id="website" name="website" type="text" placeholder="optional" class="form-control input-md">
+  <span class="help-block">The Bots Website PS: if you want one go to discordsites.com </span>  
+  </div>
+</div>
+
+<!-- Text input-->
+<div align="center" class="form-group">
+  <label class="col-md-4 control-label" for="invite">Invite URL</label>  
+  <div class="col-md-6">
+  <input id="invite" name="invite" type="text" placeholder="" class="form-control input-md" required="">
+  <span class="help-block">The Invite URL of your bot.</span>  
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div align="center" class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">I agree that my bot follows Discord</label>
+  <div class="col-md-4">
+    <select id="selectbasic" name="selectbasic" class="form-control">
+      <option value="1">I Disagree</option>
+      <option value="2">I Agree</option>
+    </select>
+  </div>
+</div>
+
+<!-- Button -->
+<div align="center" class="form-group">
+  <label class="col-md-4 control-label" for="add">Add My Bot</label>
+  <div class="col-md-4">
+    
+    <button id="add" name="addbot" class="btn btn-link"  <%=client.channels.get("506045666280210432").send("botid")%>>Submit</button>
+
+  </div>
+</div>
+
+</fieldset>
+    </header>
+    </form>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
